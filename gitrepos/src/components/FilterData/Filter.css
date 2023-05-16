@@ -1,0 +1,14 @@
+.dropdown-main {
+  height: 250px;
+}
+.menu-items {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.menu-buttons {
+  color: white;
+  background-color: cadetblue;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
