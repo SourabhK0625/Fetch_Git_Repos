@@ -5,6 +5,8 @@ This project is created using react framework.
 # Setting up the project
 First clone the repository, then run `npm install` & `npm start`.
 
+Then add your Access Token to access api's in the field `token` file `/src/components/ApiCollection/Api.js`
+
 The application will then be running on [http://localhost:3000](http://localhost:3000).
 
 # Functionality of the project
