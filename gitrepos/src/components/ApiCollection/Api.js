@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const token = ""; //Add you token address here
 
 export const useFetchRepositoryData = () => {
   const [repoData, setRepoData] = useState([]);
@@ -8,7 +9,7 @@ export const useFetchRepositoryData = () => {
       const data = await fetch("https://api.github.com/repositories", {
         method: "GET",
         headers: {
-          Authorization: "Bearer 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",
+          Authorization: `Bearer ${token}`,
         },
       });
       const listData = await data.json();
@@ -37,8 +38,7 @@ export const useFetchLanguageData = (repoData) => {
             fetch(val.languages_url, {
               method: "GET",
               headers: {
-                Authorization:
-                  "Bearer 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",
+                Authorization: `Bearer ${token}`,
               },
             }).then((res) => res.json())
           )
@@ -68,8 +68,7 @@ export const useFetchStarsData = (repoData) => {
             fetch(val.stargazers_url, {
               method: "GET",
               headers: {
-                Authorization:
-                  "Bearer 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",
+                Authorization: `Bearer ${token}`,
               },
             }).then((res) => res.json())
           )
